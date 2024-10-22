@@ -4,9 +4,13 @@
   <hr />
 
   <app-auth />
-  <ng-template appAuth="admin">
+  <!-- <ng-template appAuth="admin">
     <p>Only admins</p>
-  </ng-template>
+  </ng-template> -->
+
+  <p *appAuth="'admin'" class="protected-content admin">Only admins</p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">Only users</p>
+  <p *appAuth="'guest'" class="protected-content authenticated">Only guests</p>
     
 
 </main>

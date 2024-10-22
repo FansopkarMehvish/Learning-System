@@ -17,7 +17,7 @@ export class AuthDirective {
       if(this.authService.activePermission() === this.userType()){
         this.viewContainerRef.createEmbeddedView(this.templateRef);
       } else{
-        this.viewContainerRef.clear;
+        this.viewContainerRef.clear();
       }
     })
   }
